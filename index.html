@@ -21,16 +21,19 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <meta name="theme-color" content="#1d6aff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<!-- ProfessionalService (LocalBusiness) Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Dyson Digital",
   "image": "https://dysondigital.com/images/dysondigitallogo.png",
-  "url": "https://dysondigital.com",
+  "@id": "https://dysondigital.com/#business",
+  "url": "https://dysondigital.com/",
   "telephone": "+1-248-397-5209",
   "email": "donalddyson@dysondigital.com",
   "priceRange": "$500 - $1,500",
@@ -46,7 +49,12 @@
     "latitude": 42.4895,
     "longitude": -83.1446
   },
-  "areaServed": ["Royal Oak", "Detroit", "Metro Detroit", "Michigan"],
+  "areaServed": [
+    {"@type":"City","name":"Royal Oak"},
+    {"@type":"City","name":"Detroit"},
+    {"@type":"Place","name":"Metro Detroit"},
+    {"@type":"State","name":"Michigan"}
+  ],
   "sameAs": [
     "https://instagram.com/dyson.digital",
     "https://facebook.com/dysondigitalmi"
@@ -55,10 +63,7 @@
     "@type": "Person",
     "name": "Donald Dyson",
     "jobTitle": "Founder & Web Designer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Dyson Digital"
-    }
+    "worksFor": {"@id":"https://dysondigital.com/#business"}
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -69,7 +74,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Starter Website",
-          "description": "Clean, custom single or multi-page site for small businesses getting online."
+          "description": "Clean, professional 5-page website for small businesses. Mobile-friendly, hand-coded, includes basic SEO."
         },
         "price": "500",
         "priceCurrency": "USD"
@@ -79,9 +84,9 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Full Custom Site",
-          "description": "Multi-page, fully custom website with SEO foundation and ongoing support."
+          "description": "Multi-page custom website with advanced SEO, integrations, and tailored design up to 8 pages."
         },
-        "price": "1200",
+        "price": "1500",
         "priceCurrency": "USD"
       },
       {
@@ -89,9 +94,9 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Monthly Care Plan",
-          "description": "Ongoing updates, backups, security, and content edits for your website."
+          "description": "Ongoing website maintenance, hosting management, updates, and priority support."
         },
-        "price": "100",
+        "price": "125",
         "priceCurrency": "USD"
       }
     ]
@@ -99,50 +104,12 @@
 }
 </script>
 
-<!-- Organization + Founder Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Dyson Digital",
-  "url": "https://dysondigital.com",
-  "logo": "https://dysondigital.com/images/dysondigitallogo.png",
-  "founder": {
-    "@type": "Person",
-    "name": "Donald Dyson",
-    "jobTitle": "Founder",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Dyson Digital"
-    }
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-248-397-5209",
-    "contactType": "customer service",
-    "email": "donalddyson@dysondigital.com",
-    "areaServed": "US",
-    "availableLanguage": "English"
-  },
-  "sameAs": [
-    "https://instagram.com/dyson.digital",
-    "https://facebook.com/dysondigitalmi"
-  ]
-}
-</script>
-
-<!-- Breadcrumbs -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://dysondigital.com/"
-    }
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://dysondigital.com/"}
   ]
 }
 </script>
@@ -150,257 +117,95 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo-wrap" aria-label="Dyson Digital home">
-    <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" height="50" loading="lazy">
-    <span>
-      <span class="logo-text">Dyson Digital</span><br>
-      <span class="logo-sub">Royal Oak, MI</span>
-    </span>
+  <a href="index.html" class="logo-wrap">
+    <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" height="50">
+    <div>
+      <div class="logo-text">Dyson Digital</div>
+      <div class="logo-sub">Royal Oak · Metro Detroit</div>
+    </div>
   </a>
-  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="const n=document.getElementById('main-nav');n.classList.toggle('active');this.setAttribute('aria-expanded',n.classList.contains('active'));">&#9776;</button>
-  <nav id="main-nav">
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+  <nav id="mainNav">
     <a href="index.html" class="active">Home</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn-nav">Schedule a Free Call</a>
-    <div class="social-icons">
-      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Dyson Digital on Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    <div class="nav-socials">
+      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
-      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Dyson Digital on Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h2V2.1C16.7 2 15.6 2 14.4 2 11.8 2 10 3.6 10 6.7V10H7v4h3v8h3z"/></svg>
       </a>
     </div>
+    <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn-nav">Schedule a Free Call</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <span class="sl">Web Design · SEO · Metro Detroit</span>
-    <h1>Custom Websites Built to Grow Your Business</h1>
-    <p class="hero-sub">Serving Metro Detroit &middot; Starting at $500</p>
-    <div class="hero-buttons">
-      <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn">Schedule a Free Call</a>
-      <a href="#portfolio" class="btn btn-outline">See Our Work</a>
+    <div class="hero-tag">Web Design · Royal Oak &amp; Metro Detroit</div>
+    <h1>Custom Websites<br>Built to <span>Grow</span><br>Your Business</h1>
+    <p class="hero-desc">I design and build fast, professional websites for Metro Detroit small businesses — starting at $500. No templates. No bloat. Clean, effective sites that convert visitors into customers.</p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn">Get a Free Quote →</a>
+      <a href="portfolio.html" class="btn btn-outline">See My Work</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="sn">$500</div><div class="sl2">Starting Price</div></div>
+      <div><div class="sn">Live</div><div class="sl2">Interactive Showcase</div></div>
+      <div><div class="sn">24hr</div><div class="sl2">Proposal Turnaround</div></div>
+      <div><div class="sn">100%</div><div class="sl2">Satisfaction Guarantee</div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section-light" id="services">
-  <div class="container">
-    <div class="sh" style="text-align:center;">
-      <span class="sl">What We Do</span>
-      <h2 class="st">Services</h2>
-      <p class="ss" style="margin:0 auto;">Straightforward websites and ongoing support for Metro Detroit small businesses.</p>
-    </div>
-    <div class="grid-4">
-      <div class="card service-card">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Web Design</h3>
-        <span class="price">$500 – $1,200</span>
-        <p>Custom HTML sites hosted on GitHub Pages. Fast, clean, built to rank.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <h3>SEO</h3>
-        <span class="price">$200 – $400/mo</span>
-        <p>Google search ranking and visibility for local Metro Detroit businesses.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Care Plan</h3>
-        <span class="price">$100 – $150/mo</span>
-        <p>Monthly updates, backups, security, and performance reports.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        </div>
-        <h3>Online Store</h3>
-        <span class="price">Custom Quote</span>
-        <p>E-commerce builds on Shopify or Square for selling online.</p>
+<section class="strip">
+  <div class="sg">
+    <div class="sc"><div class="si">🖥️</div><h3>Custom Website Design</h3><p>Hand-coded, mobile-friendly websites built specifically for your business and brand.</p><div class="stag">Starter from $500</div></div>
+    <div class="sc"><div class="si">🔧</div><h3>Monthly Care Plans</h3><p>Ongoing maintenance, updates, and priority support — so your site always runs perfectly.</p><div class="stag">$125/mo · Cancel anytime</div></div>
+    <div class="sc"><div class="si">📈</div><h3>SEO &amp; Google Presence</h3><p>Get found on Google. Monthly SEO work that actively improves your local search rankings.</p><div class="stag">$200–$400/mo add-on</div></div>
+    <div class="sc"><div class="si">🛒</div><h3>Online Store &amp; Payments</h3><p>Add e-commerce, food ordering, or booking to your site. You own all accounts — no lock-in.</p><div class="stag">$75–$600 one-time</div></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wi">
+    <div class="wt">
+      <div class="sl">Why Dyson Digital</div>
+      <h2>A Web Designer Who Gets Small Business</h2>
+      <p>I'm Donald Dyson — based in Royal Oak, MI. I started Dyson Digital because I kept seeing great local businesses with bad websites or no website at all.</p>
+      <p>You get direct access to me — no middlemen, no agency fees. A professional site at a price that makes sense for a small business.</p>
+      <div class="cta-row">
+        <a href="about.html" class="btn btn-sm">Learn More About Me</a>
+        <a href="portfolio.html" class="btn btn-outline btn-sm">See My Work</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="services.html" class="btn btn-outline">View All Services &amp; Pricing</a>
+    <div class="wl">
+      <div class="wi2"><div class="wic">🤝</div><div><h4>You Own Everything</h4><p>Your domain, code, accounts. No lock-in, ever.</p></div></div>
+      <div class="wi2"><div class="wic">📱</div><div><h4>Mobile-First Design</h4><p>Every site looks perfect on phones, tablets, and desktops.</p></div></div>
+      <div class="wi2"><div class="wic">⚡</div><div><h4>Fast Turnaround</h4><p>Most starter sites are live within 1–2 weeks of your deposit.</p></div></div>
+      <div class="wi2"><div class="wic">🔒</div><div><h4>HTTPS / SSL Included</h4><p>Every site is secured at no extra charge.</p></div></div>
+      <div class="wi2"><div class="wic">📍</div><div><h4>Local to Metro Detroit</h4><p>Based in Royal Oak. Available for in-person meetings.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="section-gray" id="portfolio">
-  <div class="container">
-    <div class="sh" style="text-align:center;">
-      <span class="sl">Recent Work</span>
-      <h2 class="st">Portfolio</h2>
-      <p class="ss" style="margin:0 auto;">A few of the sites we've built for local businesses and creative clients.</p>
-    </div>
-    <div class="grid-4">
-      <div class="card portfolio-card">
-        <div class="portfolio-logo">
-          <img src="images/velologo2.png" alt="Velo hair.co logo" loading="lazy">
-        </div>
-        <h3>Velo hair.co</h3>
-        <p>Modern salon site with booking flow and service showcase.</p>
-        <a href="https://donalddyson-digital.github.io/Velo-hair.co/index.html" target="_blank" rel="noopener" class="btn btn-sm">View Live Site</a>
-      </div>
-      <div class="card portfolio-card">
-        <div class="portfolio-logo">
-          <img src="images/afterschoolspecialpodcastlogo.png" alt="After School Special Podcast logo" loading="lazy">
-        </div>
-        <h3>After School Special</h3>
-        <p>Podcast landing page with episode list and streaming links.</p>
-        <a href="https://afterschoolspecialpodcasts.github.io/After-school-special-" target="_blank" rel="noopener" class="btn btn-sm">View Live Site</a>
-      </div>
-      <div class="card portfolio-card">
-        <div class="portfolio-logo">
-          <img src="images/steelpanpizzaco.png" alt="Steel Pan Pizza Co. logo" loading="lazy">
-        </div>
-        <h3>Steel Pan Pizza</h3>
-        <p>Detroit-style deep dish pizza restaurant with menu and gallery.</p>
-        <a href="https://afterschoolspecialpodcasts.github.io/detroit-" target="_blank" rel="noopener" class="btn btn-sm">View Live Site</a>
-      </div>
-      <div class="card portfolio-card">
-        <div class="portfolio-logo">
-          <img src="images/royal-oak-pros-logo.png" alt="Royal Oak Pros. logo" loading="lazy">
-        </div>
-        <h3>Royal Oak Pros</h3>
-        <p>Local services directory for trusted Royal Oak professionals.</p>
-        <a href="https://royaloakpros.com/" target="_blank" rel="noopener" class="btn btn-sm">View Live Site</a>
-      </div>
-    </div>
+<section class="cta-b">
+  <h2>Ready to Get Your Business Online?</h2>
+  <p>Schedule a free 30-minute consultation — no pressure, just a conversation about what you need.</p>
+  <div class="cta-btns">
+    <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn">Schedule a Free Call →</a>
+    <a href="contact.html" class="btn btn-outline">Send a Message</a>
   </div>
 </section>
 
-<!-- APPROACH / PROCESS -->
-<section style="background:var(--dark);">
-  <div class="container">
-    <div class="grid-2">
-      <div class="approach-img">
-        <img src="images/blacksuit.png" alt="Donald Dyson web designer Royal Oak MI" loading="lazy">
-      </div>
-      <div>
-        <span class="sl">How It Works</span>
-        <h2 class="st">A simple process that respects your time.</h2>
-        <p class="ss">No agency run-around. No endless proposals. Just a clear path from idea to launched site.</p>
-        <ol class="steps-list">
-          <li>
-            <span class="step-num">01</span>
-            <div class="step-body">
-              <h4>Free Consultation</h4>
-              <p>A short call to understand your business, goals, and what your site actually needs to do.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">02</span>
-            <div class="step-body">
-              <h4>Build + Preview</h4>
-              <p>I design and build a working preview of your site. You review, we revise, we get it right.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">03</span>
-            <div class="step-body">
-              <h4>Launch + Support</h4>
-              <p>We go live, and I'm still here — for updates, tweaks, and anything that comes up next.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section-light">
-  <div class="container">
-    <div class="grid-2">
-      <div class="about-img">
-        <img src="images/greysuit.png" alt="Donald Dyson, Founder of Dyson Digital" loading="lazy">
-      </div>
-      <div class="about-text">
-        <span class="sl">About</span>
-        <h2 class="st">Built in Royal Oak. Made for Metro Detroit.</h2>
-        <p>I'm <strong>Donald Dyson</strong>, founder of Dyson Digital. I build websites for small businesses across Metro Detroit — salons, restaurants, podcasters, tradespeople, and local pros who need a site that actually works.</p>
-        <p>No bloated agencies. No hidden fees. Pricing is posted publicly because you deserve to know what you're paying for before you pick up the phone.</p>
-        <p>Every project is hand-built, hand-coded, and designed to load fast and rank well on Google.</p>
-        <a href="about.html" class="btn btn-outline" style="margin-top:0.5rem;">Read More About Dyson Digital</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT / FREE QUOTE -->
-<section style="background:var(--dark);">
-  <div class="container">
-    <div class="sh" style="text-align:center;">
-      <span class="sl">Get Started</span>
-      <h2 class="st">Get a Free Quote</h2>
-      <p class="ss" style="margin:0 auto;">Tell us about your project and we'll be in touch within one business day.</p>
-    </div>
-    <div class="contact-wrap">
-      <div class="contact-info">
-        <h3>Let's build something.</h3>
-        <p>You can call, email, or fill out the form — whatever's easiest. I'll personally get back to you.</p>
-        <div class="contact-detail">
-          <strong>Phone</strong>
-          <a href="tel:+12483975209">(248) 397-5209</a>
-        </div>
-        <div class="contact-detail">
-          <strong>Email</strong>
-          <a href="mailto:donalddyson@dysondigital.com">donalddyson@dysondigital.com</a>
-        </div>
-        <div class="contact-detail">
-          <strong>Area</strong>
-          <span>Royal Oak, MI · Metro Detroit</span>
-        </div>
-      </div>
-      <form class="contact-form" action="https://formspree.io/f/mvzvblry" method="POST">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required>
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </div>
-        <div class="form-row">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="(248) 555-0123">
-        </div>
-        <div class="form-row">
-          <label for="message">Tell us about your project</label>
-          <textarea id="message" name="message" placeholder="What kind of site do you need? What does your business do?" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="fi">
     <div class="footer-brand">
       <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" loading="lazy">
-      <div>
-        <span class="logo-text">Dyson Digital</span><br>
-        <span class="logo-sub">Royal Oak, MI</span>
-      </div>
-    </div>
-    <div class="footer-contact">
-      Royal Oak, MI &middot; <a href="tel:+12483975209">(248) 397-5209</a><br>
-      <a href="mailto:donalddyson@dysondigital.com">donalddyson@dysondigital.com</a>
+      <div class="logo-text">Dyson Digital</div>
     </div>
     <div class="fl">
       <a href="index.html">Home</a>
@@ -408,20 +213,27 @@
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="tel:+12483975209">(248) 397-5209</a>
+      <a href="mailto:donalddyson@dysondigital.com">donalddyson@dysondigital.com</a>
     </div>
-    <div class="footer-social">
-      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Dyson Digital on Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    <div class="footer-socials">
+      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
-      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Dyson Digital on Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h2V2.1C16.7 2 15.6 2 14.4 2 11.8 2 10 3.6 10 6.7V10H7v4h3v8h3z"/></svg>
       </a>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="fc">&copy; 2026 Dyson Digital. All rights reserved.</span>
+    <div class="fc">Royal Oak, MI · © 2026 Dyson Digital</div>
   </div>
 </footer>
 
+<script>
+(function(){
+  var t=document.getElementById('menuToggle');
+  var n=document.getElementById('mainNav');
+  if(t&&n){t.addEventListener('click',function(){n.classList.toggle('active');});}
+})();
+</script>
 </body>
 </html>
