@@ -5,52 +5,56 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services &amp; Pricing | Dyson Digital | Royal Oak Web Designer</title>
-<meta name="description" content="Transparent web design pricing from $500. Starter and custom sites, monthly care plans, SEO add-ons, and e-commerce setup for Metro Detroit small businesses.">
+<title>Services &amp; Pricing | Dyson Digital Web Design Royal Oak MI</title>
+<meta name="description" content="Dyson Digital services and transparent pricing: custom web design from $500, SEO from $200/mo, and monthly care plans for Metro Detroit small businesses.">
 <link rel="canonical" href="https://dysondigital.com/services.html">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Services &amp; Pricing | Dyson Digital">
-<meta property="og:description" content="Custom websites for Metro Detroit small businesses. Starting at $500.">
+<meta property="og:description" content="Custom web design from $500, SEO from $200/mo, and monthly care plans for Metro Detroit small businesses.">
 <meta property="og:image" content="https://dysondigital.com/images/og-preview.jpg">
 <meta property="og:url" content="https://dysondigital.com/services.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Services &amp; Pricing | Dyson Digital">
-<meta name="twitter:description" content="Custom websites for Metro Detroit small businesses. Starting at $500.">
+<meta name="twitter:description" content="Custom web design from $500, SEO from $200/mo, and monthly care plans for Metro Detroit small businesses.">
 <meta name="twitter:image" content="https://dysondigital.com/images/og-preview.jpg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <meta name="theme-color" content="#1d6aff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
+<!-- Organization + Founder -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Dyson Digital",
-  "url": "https://dysondigital.com/",
+  "url": "https://dysondigital.com",
   "logo": "https://dysondigital.com/images/dysondigitallogo.png",
   "founder": {
     "@type": "Person",
     "name": "Donald Dyson",
-    "jobTitle": "Founder & Web Designer"
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Dyson Digital"
+    }
   },
   "sameAs": [
-    "https://instagram.com/dyson.digital",
-    "https://facebook.com/dysondigitalmi"
+    "https://www.instagram.com/dyson.digital",
+    "https://www.facebook.com/profile.php?id=61573208819457"
   ]
 }
 </script>
+
+<!-- Breadcrumbs -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://dysondigital.com/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://dysondigital.com/services.html"}
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dysondigital.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://dysondigital.com/services.html"}
   ]
 }
 </script>
@@ -58,139 +62,190 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo-wrap">
-    <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" height="50">
-    <div>
-      <div class="logo-text">Dyson Digital</div>
-      <div class="logo-sub">Royal Oak · Metro Detroit</div>
-    </div>
+  <a href="index.html" class="logo-wrap" aria-label="Dyson Digital home">
+    <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" height="50" loading="lazy">
+    <span>
+      <span class="logo-text">Dyson Digital</span><br>
+      <span class="logo-sub">Royal Oak, MI</span>
+    </span>
   </a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
-  <nav id="mainNav">
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="const n=document.getElementById('main-nav');n.classList.toggle('active');this.setAttribute('aria-expanded',n.classList.contains('active'));">&#9776;</button>
+  <nav id="main-nav">
     <a href="index.html">Home</a>
     <a href="services.html" class="active">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <div class="nav-socials">
-      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn-nav">Schedule a Free Call</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/dyson.digital?igsh=MTFlbjN6anN3eXRmOQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Dyson Digital on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
-      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h2V2.1C16.7 2 15.6 2 14.4 2 11.8 2 10 3.6 10 6.7V10H7v4h3v8h3z"/></svg>
+      <a href="https://www.facebook.com/profile.php?id=61573208819457&amp;mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Dyson Digital on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
       </a>
     </div>
-    <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn-nav">Schedule a Free Call</a>
   </nav>
 </header>
 
-<div class="page-hero">
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="sl">Services &amp; Pricing</div>
   <h1>Transparent Pricing,<br>No Surprises</h1>
   <p>Clear packages built for small business budgets. All projects require a 50% deposit to start.</p>
-  <a href="contact.html" class="btn">Get a Free Quote →</a>
-  <div class="how-box">
-    <h3>How It Works</h3>
-    <p><strong>Revisions:</strong> All projects include unlimited revisions before development begins and one round of revisions after the first draft. Additional changes after that are billed at $75/hr.</p>
-    <p><strong>SEO Add-On:</strong> SEO packages require a 3-month minimum commitment. SEO is like planting seeds — you won't see the harvest in 30 days. The 3-month minimum is the shortest time needed to actually move the needle on Google. Anything less is wasted money.</p>
-  </div>
-</div>
+  <a href="contact.html" class="btn">Get a Free Quote &rarr;</a>
+</section>
 
-<div class="container">
-  <div class="sh">
-    <div class="sl">Website Packages</div>
-    <h2 class="st">Core Packages</h2>
-    <p class="ss">Both packages require a <strong class="text-white">50% non-refundable deposit</strong> to start. The remaining 50% balance is due at launch.</p>
-  </div>
-  <div class="pkg-grid">
-    <div class="pkg">
-      <div class="pkg-icon">🖥️</div>
-      <h3>Starter Website</h3>
-      <div class="pkg-price">$500 <span>– $800</span></div>
-      <div class="pkg-terms">50% deposit required to start · Non-refundable if cancelled after work begins · Balance due at launch</div>
-      <p>Perfect for small businesses that need a clean, professional web presence fast. Built by hand — no templates, no bloat.</p>
-      <ul>
-        <li>Up to 5 pages</li>
-        <li>Mobile-friendly design</li>
-        <li>Contact form</li>
-        <li>Basic SEO setup</li>
-        <li>HTTPS / SSL included</li>
-        <li>Google Business Profile setup</li>
-        <li>30-day post-launch support</li>
-        <li>1 round of revisions included</li>
-      </ul>
-      <a href="contact.html" class="btn btn-sm">Get Started →</a>
-      <div class="disc">* Domain registration cost not included</div>
-    </div>
-    <div class="pkg featured">
-      <div class="pkg-badge">Most Popular</div>
-      <div class="pkg-icon">🌐</div>
-      <h3>Full Custom Site</h3>
-      <div class="pkg-price">$800 <span>– $1,500</span></div>
-      <div class="pkg-terms">50% deposit required to start · Non-refundable if cancelled after work begins · Balance due at launch</div>
-      <p>A fully custom multi-page website tailored to your brand. Price based on scope and complexity — I'll give you a clear quote upfront.</p>
-      <ul>
-        <li>Up to 8 pages, custom layout &amp; design</li>
-        <li>Photo gallery, menu, or services showcase</li>
-        <li>Advanced SEO optimization</li>
-        <li>Google Maps &amp; reviews integration</li>
-        <li>Google Business Profile setup</li>
-        <li>HTTPS / SSL included</li>
-        <li>30-day post-launch support</li>
-        <li>1 round of revisions included</li>
-      </ul>
-      <a href="contact.html" class="btn btn-sm">Get a Quote →</a>
-      <div class="disc">* Domain registration cost not included</div>
-    </div>
-  </div>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>/</span>Services
+</nav>
 
-  <div class="sh sh-top">
-    <div class="sl">Ongoing &amp; Add-On Services</div>
-    <h2 class="st">Monthly Services &amp; Add-Ons</h2>
-    <p class="ss">Keep your site maintained and growing long after launch.</p>
-  </div>
-  <div class="addon-grid">
-    <div class="addon">
-      <div class="abadge ab-m">Maintenance</div>
-      <h3>Monthly Website Care Plan</h3>
-      <p>Hands-on monthly maintenance so your site stays fast, secure, and up to date every month.</p>
-      <ul><li>Hosting &amp; SSL management</li><li>Monthly content updates</li><li>Performance monitoring</li><li>Same-day priority support</li></ul>
-      <div class="addon-price">$125<span>/mo</span></div>
-      <div class="addon-terms">Billed monthly · Cancel anytime with 30 days notice</div>
+<!-- CORE PACKAGES -->
+<section>
+  <div class="container">
+    <div class="sh">
+      <div class="sl">Website Packages</div>
+      <h2 class="st">Core Packages</h2>
+      <p class="ss">Both packages require a <strong style="color:var(--text)">50% non-refundable deposit</strong> to start. The remaining 50% balance is due at launch.</p>
     </div>
-    <div class="addon">
-      <div class="abadge ab-g">Growth</div>
-      <h3>SEO &amp; Google Presence</h3>
-      <p>Basic SEO is always included free. This add-on actively grows your Google ranking month over month.</p>
-      <ul><li>Ongoing keyword optimization</li><li>Citation &amp; directory listings</li><li>Review generation strategy</li><li>Monthly ranking report</li></ul>
-      <div class="addon-price">$200<span>–$400/mo</span></div>
-      <div class="addon-terms">Billed monthly · Requires a 3-month minimum commitment</div>
+    <div class="pkg-grid">
+      <div class="pkg">
+        <div class="pkg-icon" aria-hidden="true">&#128200;</div>
+        <h3>Starter Website</h3>
+        <div class="pkg-price">$500 <span>&ndash; $800</span></div>
+        <div class="pkg-terms">50% deposit required to start &middot; Non-refundable if cancelled after work begins &middot; Balance due at launch</div>
+        <p>Perfect for small businesses that need a clean, professional web presence fast. Built by hand — no templates, no bloat.</p>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Mobile-friendly design</li>
+          <li>Contact form</li>
+          <li>Basic SEO setup</li>
+          <li>HTTPS / SSL included</li>
+          <li>Google Business Profile setup</li>
+          <li>30-day post-launch support</li>
+          <li>1 round of revisions included</li>
+        </ul>
+        <a href="contact.html" class="btn btn-sm">Get Started &rarr;</a>
+        <div class="disc">* Domain registration cost not included</div>
+      </div>
+      <div class="pkg featured">
+        <div class="pkg-badge">Most Popular</div>
+        <div class="pkg-icon" aria-hidden="true">&#127760;</div>
+        <h3>Full Custom Site</h3>
+        <div class="pkg-price">$800 <span>&ndash; $1,500</span></div>
+        <div class="pkg-terms">50% deposit required to start &middot; Non-refundable if cancelled after work begins &middot; Balance due at launch</div>
+        <p>A fully custom multi-page website tailored to your brand. Price based on scope and complexity — I'll give you a clear quote upfront.</p>
+        <ul>
+          <li>Up to 8 pages, custom layout &amp; design</li>
+          <li>Photo gallery, menu, or services showcase</li>
+          <li>Advanced SEO optimization</li>
+          <li>Google Maps &amp; reviews integration</li>
+          <li>Google Business Profile setup</li>
+          <li>HTTPS / SSL included</li>
+          <li>30-day post-launch support</li>
+          <li>1 round of revisions included</li>
+        </ul>
+        <a href="contact.html" class="btn btn-sm">Get a Quote &rarr;</a>
+        <div class="disc">* Domain registration cost not included</div>
+      </div>
     </div>
-    <div class="addon">
-      <div class="abadge ab-b">Best Value</div>
-      <h3>Complete Growth Bundle</h3>
-      <p>Care Plan + SEO &amp; Google Presence combined. Site stays maintained while your Google ranking grows every month.</p>
-      <ul><li>Everything in Care Plan</li><li>Everything in SEO Add-On</li><li>Save vs purchasing separately</li></ul>
-      <div class="addon-price">$250<span>/mo</span></div>
-      <div class="addon-terms">Billed monthly · Bundled deal requires a 3-month minimum commitment</div>
-    </div>
-    <div class="addon">
-      <div class="abadge ab-n">One-Time Setup</div>
-      <h3>Online Store &amp; Payments</h3>
-      <p>Add online ordering, e-commerce, or booking to your site. You own all accounts — no lock-in.</p>
-      <ul><li>Online food ordering (Square, Toast)</li><li>E-commerce setup (Shopify)</li><li>Booking &amp; scheduling (Calendly)</li><li>Embedded payment widgets</li></ul>
-      <div class="addon-price">$75<span>–$600</span></div>
-      <div class="addon-terms">One-time setup fee · Paid at project start</div>
-    </div>
-  </div>
-  <div class="plat-note">Already on <strong class="text-white">WordPress, Wix, or Squarespace?</strong> I can work with your existing platform — no need to start over. <a href="contact.html">Get in touch →</a></div>
-</div>
 
+    <div style="margin-top:3.5rem;" class="sh">
+      <div class="sl">Ongoing &amp; Add-On Services</div>
+      <h2 class="st">Monthly Services &amp; Add-Ons</h2>
+      <p class="ss">Keep your site maintained and growing long after launch.</p>
+    </div>
+    <div class="addon-grid">
+      <div class="addon">
+        <div class="abadge ab-m">Maintenance</div>
+        <h3>Monthly Website Care Plan</h3>
+        <p>Hands-on monthly maintenance so your site stays fast, secure, and up to date every month.</p>
+        <ul>
+          <li>Hosting &amp; SSL management</li>
+          <li>Monthly content updates</li>
+          <li>Performance monitoring</li>
+          <li>Same-day priority support</li>
+        </ul>
+        <div class="addon-price">$125<span>/mo</span></div>
+        <div class="addon-terms">Billed monthly &middot; Cancel anytime with 30 days notice</div>
+      </div>
+      <div class="addon">
+        <div class="abadge ab-g">Growth</div>
+        <h3>SEO &amp; Google Presence</h3>
+        <p>Basic SEO is always included free. This add-on actively grows your Google ranking month over month.</p>
+        <ul>
+          <li>Ongoing keyword optimization</li>
+          <li>Citation &amp; directory listings</li>
+          <li>Review generation strategy</li>
+          <li>Monthly ranking report</li>
+        </ul>
+        <div class="addon-price">$200<span>&ndash;$400/mo</span></div>
+        <div class="addon-terms">Billed monthly &middot; Requires a 3-month minimum commitment</div>
+      </div>
+      <div class="addon">
+        <div class="abadge ab-b">Best Value</div>
+        <h3>Complete Growth Bundle</h3>
+        <p>Care Plan + SEO &amp; Google Presence combined. Site stays maintained while your Google ranking grows every month.</p>
+        <ul>
+          <li>Everything in Care Plan</li>
+          <li>Everything in SEO Add-On</li>
+          <li>Save vs purchasing separately</li>
+        </ul>
+        <div class="addon-price">$250<span>/mo</span></div>
+        <div class="addon-terms">Billed monthly &middot; Bundled deal requires a 3-month minimum commitment</div>
+      </div>
+      <div class="addon">
+        <div class="abadge ab-n">One-Time Setup</div>
+        <h3>Online Store &amp; Payments</h3>
+        <p>Add online ordering, e-commerce, or booking to your site. You own all accounts — no lock-in.</p>
+        <ul>
+          <li>Online food ordering (Square, Toast)</li>
+          <li>E-commerce setup (Shopify)</li>
+          <li>Booking &amp; scheduling (Calendly)</li>
+          <li>Embedded payment widgets</li>
+        </ul>
+        <div class="addon-price">$75<span>&ndash;$600</span></div>
+        <div class="addon-terms">One-time setup fee &middot; Paid at project start</div>
+      </div>
+    </div>
+    <div class="plat-note">Already on <strong style="color:var(--text)">WordPress, Wix, or Squarespace?</strong> I can work with your existing platform — no need to start over. <a href="contact.html">Get in touch &rarr;</a></div>
+
+    <!-- DISCLAIMER BOX (kept per spec) -->
+    <div class="disclaimer-box">
+      <h4>Services &amp; Pricing — How It Works</h4>
+      <h3>The fine print (that isn't actually fine).</h3>
+      <p><strong>Revisions:</strong> All projects include unlimited revisions before development begins and one round of revisions after the first draft. Additional changes after that are billed at $75/hr.</p>
+      <p><strong>SEO Add-on:</strong> SEO packages require a 3-month minimum commitment. SEO is like planting seeds — you won't see the harvest in 30 days. The 3-month minimum is the shortest time needed to actually move the needle on Google. Anything less is wasted money.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--dark);">
+  <div class="container" style="text-align:center;">
+    <span class="sl">Ready to Start?</span>
+    <h2 class="st">Let's talk about your project.</h2>
+    <p class="ss" style="margin:0 auto 2rem;">Free 20-minute consultation — no pressure, no pitch deck. Just a real conversation about what your business needs.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://calendly.com/donalddyson-dysondigital" target="_blank" rel="noopener" class="btn">Schedule a Free Call</a>
+      <a href="contact.html" class="btn btn-outline">Send a Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="fi">
     <div class="footer-brand">
       <img src="images/dysondigitallogo.png" alt="Dyson Digital logo" loading="lazy">
-      <div class="logo-text">Dyson Digital</div>
+      <div>
+        <span class="logo-text">Dyson Digital</span><br>
+        <span class="logo-sub">Royal Oak, MI</span>
+      </div>
+    </div>
+    <div class="footer-contact">
+      Royal Oak, MI &middot; <a href="tel:+12483975209">(248) 397-5209</a><br>
+      <a href="mailto:donalddyson@dysondigital.com">donalddyson@dysondigital.com</a>
     </div>
     <div class="fl">
       <a href="index.html">Home</a>
@@ -198,27 +253,20 @@
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="tel:+12483975209">(248) 397-5209</a>
-      <a href="mailto:donalddyson@dysondigital.com">donalddyson@dysondigital.com</a>
     </div>
-    <div class="footer-socials">
-      <a href="https://instagram.com/dyson.digital" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/dyson.digital?igsh=MTFlbjN6anN3eXRmOQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Dyson Digital on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
-      <a href="https://facebook.com/dysondigitalmi" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h2V2.1C16.7 2 15.6 2 14.4 2 11.8 2 10 3.6 10 6.7V10H7v4h3v8h3z"/></svg>
+      <a href="https://www.facebook.com/profile.php?id=61573208819457&amp;mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Dyson Digital on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
       </a>
     </div>
-    <div class="fc">Royal Oak, MI · © 2026 Dyson Digital</div>
+  </div>
+  <div class="footer-bottom">
+    <span class="fc">&copy; 2026 Dyson Digital. All rights reserved.</span>
   </div>
 </footer>
 
-<script>
-(function(){
-  var t=document.getElementById('menuToggle');
-  var n=document.getElementById('mainNav');
-  if(t&&n){t.addEventListener('click',function(){n.classList.toggle('active');});}
-})();
-</script>
 </body>
 </html>
