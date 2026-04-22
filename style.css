@@ -343,8 +343,22 @@ nav a:hover,nav a.active{color:var(--text);}
   border-radius:14px;
   overflow:hidden;
   border:1px solid var(--border);
+  max-width:260px;
+  margin:0 auto;
+}
+@media(max-width:860px){
+  .about-img{max-width:100%;}
 }
 .about-img img{width:100%;height:auto;display:block;}
+
+/* About page grid: narrow image column, wide text column (desktop only) */
+@media(min-width:861px){
+  .grid-2:has(> .about-img){
+    grid-template-columns:280px 1fr;
+    gap:3rem;
+    align-items:start;
+  }
+}
 .about-text p{
   color:var(--muted);
   font-size:0.98rem;
@@ -1477,7 +1491,7 @@ footer{
 
 /* ---- Portfolio: logo strip + New badge ---- */
 .pf-logo{
-  background:#fff;
+  background:var(--dark2);
   border-radius:6px;
   height:130px;
   display:flex;
