@@ -1357,6 +1357,7 @@ footer{
   border:1px solid var(--border);
   border-radius:14px;
   padding:2rem;
+  scroll-margin-top:90px;
 }
 .form-wrap h3{
   font-size:1.4rem;
@@ -1528,4 +1529,112 @@ footer{
   gap:0.35rem;
   align-items:flex-end;
   flex-shrink:0;
+}
+
+/* =========================================================
+   CONTACT HERO — INTRO ROW (image + panel side-by-side)
+   ========================================================= */
+.intro-row{
+  max-width:720px;
+  margin:2rem auto 0;
+  display:flex;
+  gap:1.75rem;
+  align-items:stretch;
+  text-align:left;
+}
+.intro-row .contact-hero-img{
+  margin:0;
+  flex:0 0 210px;
+  max-width:210px;
+  align-self:stretch;
+  display:flex;
+}
+.intro-row .contact-hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.intro-panel{
+  flex:1;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:0.6rem;
+}
+.ip-name{
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:1.3rem;
+  letter-spacing:-0.01em;
+  color:var(--text);
+}
+.ip-role{
+  font-size:0.78rem;
+  color:var(--primary);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-weight:600;
+  margin-bottom:0.3rem;
+}
+.ip-quote{
+  color:var(--muted);
+  font-size:0.88rem;
+  font-weight:300;
+  line-height:1.65;
+  font-style:italic;
+  padding:0.6rem 0;
+  border-top:1px dashed var(--border);
+  border-bottom:1px dashed var(--border);
+  margin:0.3rem 0;
+}
+.ip-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0.6rem;
+  margin-top:0.3rem;
+}
+.ip-stats > div{text-align:center;}
+.ip-n{
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:1rem;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  letter-spacing:-0.01em;
+}
+.ip-l{
+  font-size:0.62rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--muted);
+  font-weight:500;
+  margin-top:1px;
+}
+
+/* Mobile: stack image above panel, restore original image sizing */
+@media(max-width:768px){
+  .intro-row{
+    flex-direction:column;
+    gap:1.25rem;
+    max-width:420px;
+    text-align:center;
+  }
+  .intro-row .contact-hero-img{
+    flex:0 0 auto;
+    max-width:420px;
+    width:100%;
+  }
+  .intro-row .contact-hero-img img{
+    height:auto;
+    object-fit:contain;
+  }
+  .intro-panel{padding:1.25rem;}
+  .ip-quote{text-align:left;}
 }
